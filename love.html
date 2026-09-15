@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Surprise For Daisy ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    min-height:100vh;
+    background:#000;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial,sans-serif;
+}
+
+.page{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+svg{
+    width:min(95vw,900px);
+    height:min(95vh,850px);
+    overflow:visible;
+}
+
+.heart{
+    animation:beat 2s ease-in-out infinite;
+    transform-origin:center;
+}
+
+.love{
+    fill:#ff9dcc;
+    font-size:17px;
+    font-weight:bold;
+    letter-spacing:2px;
+    filter:
+    drop-shadow(0 0 3px white)
+    drop-shadow(0 0 8px #ff69b4)
+    drop-shadow(0 0 18px #ff1493);
+}
+
+.daisy{
+    fill:#ff9dcc;
+    font-size:64px;
+    font-family:cursive;
+    font-style:italic;
+    font-weight:bold;
+    text-anchor:middle;
+    filter:
+    drop-shadow(0 0 5px white)
+    drop-shadow(0 0 12px #ff69b4)
+    drop-shadow(0 0 25px #ff1493);
+    animation:glow 1.5s ease-in-out infinite alternate;
+}
+
+.main{
+    fill:#ffd6e7;
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:7px;
+    text-anchor:middle;
+    filter:
+    drop-shadow(0 0 5px white)
+    drop-shadow(0 0 12px #ff69b4);
+}
+
+.line{
+    stroke:#ff8fc4;
+    stroke-width:2;
+    filter:drop-shadow(0 0 8px #ff1493);
+}
+
+.spark{
+    fill:white;
+    font-size:24px;
+    filter:drop-shadow(0 0 8px #ff69b4);
+    animation:spark 1.2s infinite alternate;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.025)}
+}
+
+@keyframes glow{
+    from{opacity:.65}
+    to{opacity:1}
+}
+
+@keyframes spark{
+    from{opacity:.2}
+    to{opacity:1}
+}
+
+@media(max-width:600px){
+    .love{font-size:13px}
+    .daisy{font-size:45px}
+    .main{font-size:18px;letter-spacing:4px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<svg viewBox="0 0 900 850">
+
+<defs>
+
+<path id="heartPath"
+d="M450 650
+C420 620 145 445 125 270
+C110 145 245 75 345 150
+C405 195 450 250 450 250
+C450 250 495 195 555 150
+C655 75 790 145 775 270
+C755 445 480 620 450 650 Z"/>
+
+</defs>
+
+<g class="heart">
+
+<text class="love">
+<textPath href="#heartPath">
+I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥
+</textPath>
+</text>
+
+</g>
+
+<text x="450" y="455" class="daisy">Daisy</text>
+
+<line x1="210" y1="475" x2="335" y2="475" class="line"/>
+<line x1="565" y1="475" x2="690" y2="475" class="line"/>
+
+<text x="450" y="535" class="main">I LOVE YOU</text>
+
+<text x="175" y="150" class="spark">✦</text>
+<text x="720" y="180" class="spark">✦</text>
+<text x="220" y="610" class="spark">✦</text>
+<text x="690" y="625" class="spark">✦</text>
+
+</svg>
+
+</div>
+
+</body>
+</html>
