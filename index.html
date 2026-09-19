@@ -3,158 +3,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Surprise For Daisy ❤️</title>
+<title>Happy Birthday Ankitha 🎂</title>
 
 <style>
-*{box-sizing:border-box}
-
-body{
-    margin:0;
-    min-height:100vh;
-    background:#000;
-    overflow:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-family:Arial,sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.page{
-    width:100vw;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #16001f, #3b064d, #14001c);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-svg{
-    width:min(95vw,900px);
-    height:min(95vh,850px);
-    overflow:visible;
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    z-index: 5;
 }
 
-.heart{
-    animation:beat 2s ease-in-out infinite;
-    transform-origin:center;
+.card {
+    padding: 35px 25px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.20);
+    box-shadow: 0 0 40px rgba(255,100,200,0.25);
 }
 
-.love{
-    fill:#ff9dcc;
-    font-size:17px;
-    font-weight:bold;
-    letter-spacing:2px;
-    filter:
-    drop-shadow(0 0 3px white)
-    drop-shadow(0 0 8px #ff69b4)
-    drop-shadow(0 0 18px #ff1493);
+.small {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    opacity: 0.9;
 }
 
-.daisy{
-    fill:#ff9dcc;
-    font-size:64px;
-    font-family:cursive;
-    font-style:italic;
-    font-weight:bold;
-    text-anchor:middle;
-    filter:
-    drop-shadow(0 0 5px white)
-    drop-shadow(0 0 12px #ff69b4)
-    drop-shadow(0 0 25px #ff1493);
-    animation:glow 1.5s ease-in-out infinite alternate;
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
 }
 
-.main{
-    fill:#ffd6e7;
-    font-size:25px;
-    font-weight:bold;
-    letter-spacing:7px;
-    text-anchor:middle;
-    filter:
-    drop-shadow(0 0 5px white)
-    drop-shadow(0 0 12px #ff69b4);
+.message {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 0;
 }
 
-.line{
-    stroke:#ff8fc4;
-    stroke-width:2;
-    filter:drop-shadow(0 0 8px #ff1493);
+button {
+    margin-top: 15px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    background: white;
+    color: #7b176d;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
-.spark{
-    fill:white;
-    font-size:24px;
-    filter:drop-shadow(0 0 8px #ff69b4);
-    animation:spark 1.2s infinite alternate;
+button:hover {
+    transform: scale(1.05);
 }
 
-@keyframes beat{
-    0%,100%{transform:scale(1)}
-    50%{transform:scale(1.025)}
+#surprise {
+    display: none;
 }
 
-@keyframes glow{
-    from{opacity:.65}
-    to{opacity:1}
+.final {
+    font-size: 19px;
+    line-height: 1.9;
 }
 
-@keyframes spark{
-    from{opacity:.2}
-    to{opacity:1}
+.signature {
+    margin-top: 25px;
+    font-size: 18px;
+    font-style: italic;
 }
 
-@media(max-width:600px){
-    .love{font-size:13px}
-    .daisy{font-size:45px}
-    .main{font-size:18px;letter-spacing:4px}
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: floatUp linear forwards;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff8bd8;
+    }
+    to {
+        text-shadow: 0 0 30px #ffffff, 0 0 50px #ff4fc3;
+    }
+}
+
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    top: -10px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 28px 18px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="page">
+<div class="container">
 
-<svg viewBox="0 0 900 850">
+    <div class="card" id="welcome">
+        <div class="small">✨ Hey Ankitha... ✨</div>
 
-<defs>
+        <h1>💌 A Little Surprise</h1>
 
-<path id="heartPath"
-d="M450 650
-C420 620 145 445 125 270
-C110 145 245 75 345 150
-C405 195 450 250 450 250
-C450 250 495 195 555 150
-C655 75 790 145 775 270
-C755 445 480 620 450 650 Z"/>
+        <p class="message">
+            I made something small<br>
+            just for your special day... 🌸
+        </p>
 
-</defs>
+        <button onclick="showSurprise()">
+            Tap Here 💖
+        </button>
+    </div>
 
-<g class="heart">
+    <div class="card" id="surprise">
 
-<text class="love">
-<textPath href="#heartPath">
-I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥ I love you ♥
-</textPath>
-</text>
+        <div class="small">🎉 TODAY IS YOUR DAY 🎉</div>
 
-</g>
+        <h1>🎂 HAPPY BIRTHDAY<br>ANKITHA! 💖</h1>
 
-<text x="450" y="455" class="daisy">Daisy</text>
+        <p class="message">
+            May your smile always stay bright ✨<br>
+            May your dreams come true 🌸<br>
+            And may this year bring you<br>
+            lots and lots of happiness. ❤️
+        </p>
 
-<line x1="210" y1="475" x2="335" y2="475" class="line"/>
-<line x1="565" y1="475" x2="690" y2="475" class="line"/>
+        <p class="final">
+            Keep smiling,<br>
+            keep shining,<br>
+            and enjoy your beautiful day! 🥰
+        </p>
 
-<text x="450" y="535" class="main">I LOVE YOU</text>
+        <div class="signature">
+            With lots of wishes ❤️<br>
+            — From Arun ✨
+        </div>
 
-<text x="175" y="150" class="spark">✦</text>
-<text x="720" y="180" class="spark">✦</text>
-<text x="220" y="610" class="spark">✦</text>
-<text x="690" y="625" class="spark">✦</text>
-
-</svg>
+    </div>
 
 </div>
+
+<script>
+
+function showSurprise() {
+
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("surprise").style.display = "block";
+
+    createHearts();
+    createConfetti();
+}
+
+function createHearts() {
+
+    for (let i = 0; i < 25; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.innerHTML = ["❤️","💖","💕","💗","💓"][Math.floor(Math.random()*5)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (4 + Math.random() * 5) + "s";
+        heart.style.animationDelay = Math.random() * 2 + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 10000);
+    }
+}
+
+function createConfetti() {
+
+    for (let i = 0; i < 80; i++) {
+
+        const piece = document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.animationDuration = (2 + Math.random() * 4) + "s";
+        piece.style.animationDelay = Math.random() * 2 + "s";
+
+        piece.style.background =
+            ["#ff4fa3","#ffd166","#ffffff","#8be9fd","#c77dff"]
+            [Math.floor(Math.random()*5)];
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 7000);
+    }
+}
+
+</script>
 
 </body>
 </html>
